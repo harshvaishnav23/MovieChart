@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pri-color: #22254b;
+    --sec-color: #373b69;
+    --white-color: #fff;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+}
+
+body{
+    
+    background-color: var(--sec-color);
+}
+
+.header{
+    padding: 10px;
+    line-height: 1;
+    background-color: var(--pri-color);
+}
+
+.logo{
+    font-size: 2rem;
+    color: var(--white-color);
+}
+
+.imdbCard figure{
+    height: 450px;
+    margin: 0;
+    position: relative;
+}
+
+.imdbCard figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--pri-color);
+    padding: 20px;
+    color: var(--white-color);
+    line-height: 1;
+    font-size: 18px;
+}
+
+.imdbCard .cardImg{
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card.imdbCard {
+    overflow: hidden;
+}
+
+.overview {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--white-color);
+    width: 100%;
+    max-height: 75%;
+    /* transform: translateY(110%); */
+    transform: scale(0);
+    transition: all .5s ease-in-out;
+}
+
+.card.imdbCard:hover .overview{
+    transform: scale(1);
+    /* transform: translateY(0); */
+}
+
+.overview h4{
+    text-align: center;
+}
+
