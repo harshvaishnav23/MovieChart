@@ -813,7 +813,7 @@ movieArr.forEach(movie => {
                             </p>
                         </div>
                         <div class="col-3">
-                            <p class="details rating">
+                            <p class="details rating ${getColor(movie.vote_average)}">
                                 ${movie.vote_average}
                             </p>
                         </div>
@@ -831,17 +831,15 @@ movieArr.forEach(movie => {
     `
 })
 
-// let rating1 = 8;
-// let rating2 = 6;
-
-// if(movieArr.vote_average >= 8){
-//     document.getElementById("info1").style.color = '#FFFF00';
-// }else if(movieArr.vote_average >= 6){
-//     document.getElementById("info1").style.color = '#00FF00';
-// }else{
-//     document.getElementById("info1").style.color = '#FF0000';
-// }
-
-
 info1.innerHTML = res;
+
+function getColor(rating){
+  if(rating >= 8){
+    return 'green'
+  }else if(rating >=6){
+    return 'yellow'
+  }else{
+    return 'red'
+  }
+}
 
